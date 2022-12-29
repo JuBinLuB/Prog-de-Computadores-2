@@ -8,8 +8,6 @@ public class App {
 
         JogoDaVelha jogo = new JogoDaVelha();
 
-        System.out.println("Faça sua jogada. Escolha Linha e Coluna, por valores de 1 a 3.");
-
         jogo.jogar(scan.nextInt(), scan.nextInt());
         scan.close();
     }

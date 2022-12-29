@@ -2,21 +2,21 @@ package components;
 
 public class JogoDaVelha {
 
-    private StatusPlace[][] grade;
+    private char[][] grade;
 
-    private StatusPlace jogadorOne = StatusPlace.PLAYER_ONE;
-    private StatusPlace jogadorTwo = StatusPlace.PLAYER_TWO;
+    private char jogadorOne = StatusPlace.PLAYER_ONE.getSimbolo();
+    private char jogadorTwo = StatusPlace.PLAYER_TWO.getSimbolo();
 
     private int jogada;
     private boolean terminar;
 
     public JogoDaVelha() {
 
-        grade = new StatusPlace[3][3];
+        grade = new char[3][3];
 
         for (int i = 0; i < grade.length; i++) {
             for (int j = 0; j < grade[i].length; j++) {
-                grade[i][j] = StatusPlace.EMPTY;
+                grade[i][j] = StatusPlace.EMPTY.getSimbolo();
             }
         }
 
@@ -24,15 +24,15 @@ public class JogoDaVelha {
         terminar = false;
     }
 
-    public StatusPlace[][] getGrade() {
+    public char[][] getGrade() {
         return this.grade;
     }
 
-    public StatusPlace getJogadorOne() {
+    public char getJogadorOne() {
         return this.jogadorOne;
     }
 
-    public StatusPlace getJogadorTwo() {
+    public char getJogadorTwo() {
         return this.jogadorTwo;
     }
 
@@ -61,6 +61,7 @@ public class JogoDaVelha {
                     }
 
                     System.out.println();
+                    jogada++;
                 }
 
             } else {
@@ -74,6 +75,7 @@ public class JogoDaVelha {
                     }
 
                     System.out.println();
+                    jogada++;
                 }
 
             }
