@@ -7,6 +7,7 @@ public class JogoDaVelha {
     private StatusPlace jogadorOne = StatusPlace.PLAYER_ONE;
     private StatusPlace jogadorTwo = StatusPlace.PLAYER_TWO;
 
+    private int jogada;
     private boolean terminar;
 
     public JogoDaVelha() {
@@ -19,6 +20,7 @@ public class JogoDaVelha {
             }
         }
 
+        jogada = 1;
         terminar = false;
     }
 
@@ -48,17 +50,33 @@ public class JogoDaVelha {
 
         while (!terminar) {
 
-            System.out.println("Vez do Jogador 1...");
-            for (int i = 0; i < grade.length; i++) {
-                for (int j = 0; j < grade.length; j++) {
+            if (jogada % 2 == 1) {
 
-                    grade[linha][coluna] = jogadorOne;
-                    System.out.println(grade[i][j]);
+                System.out.println("Vez do Jogador 1...");
+                for (int i = 0; i < grade.length; i++) {
+                    for (int j = 0; j < grade.length; j++) {
+
+                        grade[linha][coluna] = jogadorOne;
+                        System.out.print(grade[i][j]);
+                    }
+
+                    System.out.println();
                 }
-            }
 
-            System.out.println("Vez do jogador 2...");
-            
+            } else {
+
+                System.out.println("Vez do jogador 2...");
+                for (int i = 0; i < grade.length; i++) {
+                    for (int j = 0; j < grade[i].length; j++) {
+
+                        grade[linha][coluna] = jogadorTwo;
+                        System.out.print(grade[i][j]);
+                    }
+
+                    System.out.println();
+                }
+
+            }
         }
 
     }
