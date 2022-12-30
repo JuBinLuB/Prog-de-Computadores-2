@@ -124,7 +124,6 @@ public class JogoDaVelha {
                 (grade[0][0] == jogadorOne && grade[1][1] == jogadorOne && grade[2][2] == jogadorOne) ||
                 (grade[0][2] == jogadorOne && grade[1][1] == jogadorOne && grade[2][0] == jogadorOne)) {
 
-                System.out.println();
                 System.out.println("Jogador 1 é o vencedor!");
                 this.terminar = true;
             }
@@ -138,7 +137,6 @@ public class JogoDaVelha {
                 (grade[0][0] == jogadorTwo && grade[1][1] == jogadorTwo && grade[2][2] == jogadorTwo) ||
                 (grade[0][2] == jogadorTwo && grade[1][1] == jogadorTwo && grade[2][0] == jogadorTwo)) {
 
-                System.out.println();
                 System.out.println("Jogador 2 é o vencedor!");
                 this.terminar = true;
             }
