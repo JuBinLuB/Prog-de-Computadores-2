@@ -6,18 +6,15 @@ public class JogoDaVelha {
 
     Scanner scan = new Scanner(System.in);
 
-    private char[][] grade = new char[3][3];
+    private char[][] grade;
 
-    private char jogadorOne = StatusPlace.PLAYER_ONE.getSimbolo();
-    private char jogadorTwo = StatusPlace.PLAYER_TWO.getSimbolo();
-
+    private char jogadorOne;
+    private char jogadorTwo;
     private char jogador;
-
-    private boolean terminar = false;
-
     private int jogada;
     private int linha;
     private int coluna;
+    private boolean terminar;
 
     public JogoDaVelha() {
 
@@ -29,27 +26,20 @@ public class JogoDaVelha {
             }
         }
 
+        this.jogadorOne = StatusPlace.PLAYER_ONE.getSimbolo();
+        this.jogadorTwo = StatusPlace.PLAYER_TWO.getSimbolo();
+
         this.jogada = 1;
-        this.terminar = false;
         this.linha = 0;
         this.coluna = 0;
-    }
-
-    public char[][] getGrade() {
-        return this.grade;
-    }
-
-    public char getJogadorOne() {
-        return this.jogadorOne;
-    }
-
-    public char getJogadorTwo() {
-        return this.jogadorTwo;
+        this.terminar = false;
     }
 
     public void exibirGrade() {
 
         for (int i = 0; i < grade.length; i++) {
+
+            System.out.print(" ");
             for (int j = 0; j < grade[i].length; j++) {
 
                 this.grade[linha][coluna] = this.jogador;
@@ -58,10 +48,21 @@ public class JogoDaVelha {
 
             System.out.print("|");
             System.out.println();
+
+            if (i <= 1) {
+
+                for (int k = 0; k < grade[i].length; k++) {
+                    System.out.print("-----");
+                }
+    
+                System.out.println();
+            }
         }
     }
 
     public void jogar() {
+
+        System.out.println("Faça sua jogada inserindo valores de 1 a 3, para as linhas e para as colunas...\n");
 
         while (!terminar) {
 
@@ -79,8 +80,6 @@ public class JogoDaVelha {
 
             while (!valida) {
 
-                System.out.println("Insira valores de 1 a 3 para linha e para coluna...");
-
                 System.out.print("Linha: ");
                 linha = scan.nextInt();
                 System.out.print("Coluna: ");
@@ -92,9 +91,10 @@ public class JogoDaVelha {
 
                     linha--;
                     coluna--;
+
                     if (grade[linha][coluna] == jogadorOne || grade[linha][coluna] == jogadorTwo) {
 
-                        System.out.println("Jogada inválida!");
+                        System.out.println("Jogada inválida! Tente novamente...");
                     } else {
 
                         valida = true;
@@ -115,27 +115,26 @@ public class JogoDaVelha {
 
         if (this.jogada >= 5 && this.jogada < 10) {
 
-            if ((grade[0][0] == jogadorOne && grade[0][1] == jogadorOne && grade[0][2] == jogadorOne) ||
-                (grade[1][0] == jogadorOne && grade[1][1] == jogadorOne && grade[1][2] == jogadorOne) ||
-                (grade[2][0] == jogadorOne && grade[2][1] == jogadorOne && grade[2][2] == jogadorOne) ||
-                (grade[0][0] == jogadorOne && grade[1][0] == jogadorOne && grade[2][0] == jogadorOne) ||
-                (grade[0][1] == jogadorOne && grade[1][1] == jogadorOne && grade[2][1] == jogadorOne) ||
-                (grade[0][2] == jogadorOne && grade[1][2] == jogadorOne && grade[2][2] == jogadorOne) ||
-                (grade[0][0] == jogadorOne && grade[1][1] == jogadorOne && grade[2][2] == jogadorOne) ||
-                (grade[0][2] == jogadorOne && grade[1][1] == jogadorOne && grade[2][0] == jogadorOne)) {
+            if ((grade[0][0] == this.jogadorOne && grade[0][1] == this.jogadorOne && grade[0][2] == this.jogadorOne) ||
+                (grade[1][0] == this.jogadorOne && grade[1][1] == this.jogadorOne && grade[1][2] == this.jogadorOne) ||
+                (grade[2][0] == this.jogadorOne && grade[2][1] == this.jogadorOne && grade[2][2] == this.jogadorOne) ||
+                (grade[0][0] == this.jogadorOne && grade[1][0] == this.jogadorOne && grade[2][0] == this.jogadorOne) ||
+                (grade[0][1] == this.jogadorOne && grade[1][1] == this.jogadorOne && grade[2][1] == this.jogadorOne) ||
+                (grade[0][2] == this.jogadorOne && grade[1][2] == this.jogadorOne && grade[2][2] == this.jogadorOne) ||
+                (grade[0][0] == this.jogadorOne && grade[1][1] == this.jogadorOne && grade[2][2] == this.jogadorOne) ||
+                (grade[0][2] == this.jogadorOne && grade[1][1] == this.jogadorOne && grade[2][0] == this.jogadorOne)) {
 
                 System.out.println("Jogador 1 é o vencedor!");
                 this.terminar = true;
             }
-
-            if ((grade[0][0] == jogadorTwo && grade[0][1] == jogadorTwo && grade[0][2] == jogadorTwo) ||
-                (grade[1][0] == jogadorTwo && grade[1][1] == jogadorTwo && grade[1][2] == jogadorTwo) ||
-                (grade[2][0] == jogadorTwo && grade[2][1] == jogadorTwo && grade[2][2] == jogadorTwo) ||
-                (grade[0][0] == jogadorTwo && grade[1][0] == jogadorTwo && grade[2][0] == jogadorTwo) ||
-                (grade[0][1] == jogadorTwo && grade[1][1] == jogadorTwo && grade[2][1] == jogadorTwo) ||
-                (grade[0][2] == jogadorTwo && grade[1][2] == jogadorTwo && grade[2][2] == jogadorTwo) ||
-                (grade[0][0] == jogadorTwo && grade[1][1] == jogadorTwo && grade[2][2] == jogadorTwo) ||
-                (grade[0][2] == jogadorTwo && grade[1][1] == jogadorTwo && grade[2][0] == jogadorTwo)) {
+            if ((grade[0][0] == this.jogadorTwo && grade[0][1] == this.jogadorTwo && grade[0][2] == this.jogadorTwo) ||
+                (grade[1][0] == this.jogadorTwo && grade[1][1] == this.jogadorTwo && grade[1][2] == this.jogadorTwo) ||
+                (grade[2][0] == this.jogadorTwo && grade[2][1] == this.jogadorTwo && grade[2][2] == this.jogadorTwo) ||
+                (grade[0][0] == this.jogadorTwo && grade[1][0] == this.jogadorTwo && grade[2][0] == this.jogadorTwo) ||
+                (grade[0][1] == this.jogadorTwo && grade[1][1] == this.jogadorTwo && grade[2][1] == this.jogadorTwo) ||
+                (grade[0][2] == this.jogadorTwo && grade[1][2] == this.jogadorTwo && grade[2][2] == this.jogadorTwo) ||
+                (grade[0][0] == this.jogadorTwo && grade[1][1] == this.jogadorTwo && grade[2][2] == this.jogadorTwo) ||
+                (grade[0][2] == this.jogadorTwo && grade[1][1] == this.jogadorTwo && grade[2][0] == this.jogadorTwo)) {
 
                 System.out.println("Jogador 2 é o vencedor!");
                 this.terminar = true;
@@ -143,7 +142,7 @@ public class JogoDaVelha {
 
         } else if (this.jogada > 9) {
 
-            System.out.println("EMPATE");
+            System.out.println("EMPATE!");
             this.terminar = true;
         }
     }
