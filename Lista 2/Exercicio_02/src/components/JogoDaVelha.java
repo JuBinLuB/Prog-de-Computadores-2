@@ -94,11 +94,14 @@ public class JogoDaVelha {
 
                     if (grade[linha][coluna] == jogadorOne || grade[linha][coluna] == jogadorTwo) {
 
-                        System.out.println("Jogada inválida! Tente novamente...");
+                        System.out.println("Posição já ocupada! Tente novamente...");
                     } else {
 
                         valida = true;
                     }
+                } else {
+
+                    System.out.println("Jogada inválida! Tente novamente...");
                 }
             }
 
