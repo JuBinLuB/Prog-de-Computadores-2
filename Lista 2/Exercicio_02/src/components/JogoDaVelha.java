@@ -62,7 +62,7 @@ public class JogoDaVelha {
 
     public void jogar() {
 
-        System.out.println("Faça sua jogada inserindo valores de 1 a 3, para as linhas e para as colunas...\n");
+        System.out.println("Faça sua jogada atribuindo valores de 1 a 3 para as linhas e para as colunas...\n");
 
         while (!terminar) {
 
