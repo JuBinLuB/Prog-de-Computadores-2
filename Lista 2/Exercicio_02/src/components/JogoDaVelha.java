@@ -35,7 +35,6 @@ public class JogoDaVelha {
             System.out.print(" ");
             for (int j = 0; j < grade[i].length; j++) {
 
-                this.grade[linha][coluna] = this.jogador;
                 System.out.printf("|%2c ", grade[i][j]);
             }
 
@@ -106,14 +105,15 @@ public class JogoDaVelha {
                 linha--;
                 coluna--;
 
-                if (grade[linha][coluna] == StatusPlace.PLAYER_ONE.getSimbolo() ||
-                        grade[linha][coluna] == StatusPlace.PLAYER_TWO.getSimbolo()) {
+                if (this.grade[linha][coluna] == StatusPlace.PLAYER_ONE.getSimbolo() ||
+                        this.grade[linha][coluna] == StatusPlace.PLAYER_TWO.getSimbolo()) {
 
                     System.out.println("Posição já preenchida! Tente novamente...");
                 } else {
 
                     valida = true;
                     this.numJogadas++;
+                    this.grade[linha][coluna] = this.jogador;
                 }
             } else {
                 System.out.println("Jogada inválida! Tente novamente...");
