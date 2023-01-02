@@ -17,8 +17,8 @@ public class JogoDaVelha {
 
         this.grade = new char[3][3];
 
-        for (int i = 0; i < grade.length; i++) {
-            for (int j = 0; j < grade[i].length; j++) {
+        for (int i = 0; i < this.grade.length; i++) {
+            for (int j = 0; j < this.grade[i].length; j++) {
                 this.grade[i][j] = StatusPlace.EMPTY.getSimbolo();
             }
         }
@@ -30,19 +30,19 @@ public class JogoDaVelha {
 
     public void exibirGrade() {
 
-        for (int i = 0; i < grade.length; i++) {
+        for (int i = 0; i < this.grade.length; i++) {
 
             System.out.print(" ");
-            for (int j = 0; j < grade[i].length; j++) {
+            for (int j = 0; j < this.grade[i].length; j++) {
 
-                System.out.printf("|%2c ", grade[i][j]);
+                System.out.printf("|%2c ", this.grade[i][j]);
             }
 
             System.out.print("|");
             System.out.println();
             if (i <= 1) {
 
-                for (int k = 0; k < grade[i].length; k++) {
+                for (int k = 0; k < this.grade[i].length; k++) {
                     System.out.print("-----");
                 }
 
@@ -60,7 +60,7 @@ public class JogoDaVelha {
         boolean terminar = false;
         while (!terminar) {
 
-            if (numJogadas % 2 == 1) {
+            if (this.numJogadas % 2 == 1) {
 
                 System.out.println("Vez do jogador 1...");
                 this.jogador = StatusPlace.PLAYER_ONE.getSimbolo();
@@ -70,18 +70,18 @@ public class JogoDaVelha {
                 this.jogador = StatusPlace.PLAYER_TWO.getSimbolo();
             }
 
-            validarJogada();
-            exibirGrade();
+            this.validarJogada();
+            this.exibirGrade();
 
-            if (verificarVencedor(StatusPlace.PLAYER_ONE.getSimbolo())) {
+            if (this.verificarVencedor(StatusPlace.PLAYER_ONE.getSimbolo())) {
 
                 terminar = true;
                 System.out.println("Jogador 1 é o vencedor!");
-            } else if (verificarVencedor(StatusPlace.PLAYER_TWO.getSimbolo())) {
+            } else if (this.verificarVencedor(StatusPlace.PLAYER_TWO.getSimbolo())) {
 
                 terminar = true;
                 System.out.println("Jogador 2 é o vencedor!");
-            } else if (verificarEmpate()) {
+            } else if (this.verificarEmpate()) {
 
                 terminar = true;
                 System.out.println("EMPATE!");
@@ -89,21 +89,25 @@ public class JogoDaVelha {
         }
     }
 
+    public int lerJogada(String coordenada) {
+
+        System.out.print(coordenada + ": ");
+        return scan.nextInt();
+    }
+
     public void validarJogada() {
 
         boolean valida = false;
         while (!valida) {
 
-            System.out.print("Linha: ");
-            this.linha = scan.nextInt();
-            System.out.print("Coluna: ");
-            this.coluna = scan.nextInt();
+            this.linha = this.lerJogada("Linha");
+            this.coluna = this.lerJogada("Coluna");
 
             System.out.println();
             if (linha >= 1 && linha <= 3 && coluna >= 1 && coluna <= 3) {
 
-                linha--;
-                coluna--;
+                this.linha--;
+                this.coluna--;
 
                 if (this.grade[linha][coluna] == StatusPlace.PLAYER_ONE.getSimbolo() ||
                         this.grade[linha][coluna] == StatusPlace.PLAYER_TWO.getSimbolo()) {
@@ -123,14 +127,14 @@ public class JogoDaVelha {
 
     public boolean verificarVencedor(char jogador) {
 
-        if ((grade[0][0] == jogador && grade[0][1] == jogador && grade[0][2] == jogador) ||
-                (grade[1][0] == jogador && grade[1][1] == jogador && grade[1][2] == jogador) ||
-                (grade[2][0] == jogador && grade[2][1] == jogador && grade[2][2] == jogador) ||
-                (grade[0][0] == jogador && grade[1][0] == jogador && grade[2][0] == jogador) ||
-                (grade[0][1] == jogador && grade[1][1] == jogador && grade[2][1] == jogador) ||
-                (grade[0][2] == jogador && grade[1][2] == jogador && grade[2][2] == jogador) ||
-                (grade[0][0] == jogador && grade[1][1] == jogador && grade[2][2] == jogador) ||
-                (grade[0][2] == jogador && grade[1][1] == jogador && grade[2][0] == jogador)) {
+        if ((this.grade[0][0] == jogador && this.grade[0][1] == jogador && this.grade[0][2] == jogador) ||
+                (this.grade[1][0] == jogador && this.grade[1][1] == jogador && this.grade[1][2] == jogador) ||
+                (this.grade[2][0] == jogador && this.grade[2][1] == jogador && this.grade[2][2] == jogador) ||
+                (this.grade[0][0] == jogador && this.grade[1][0] == jogador && this.grade[2][0] == jogador) ||
+                (this.grade[0][1] == jogador && this.grade[1][1] == jogador && this.grade[2][1] == jogador) ||
+                (this.grade[0][2] == jogador && this.grade[1][2] == jogador && this.grade[2][2] == jogador) ||
+                (this.grade[0][0] == jogador && this.grade[1][1] == jogador && this.grade[2][2] == jogador) ||
+                (this.grade[0][2] == jogador && this.grade[1][1] == jogador && this.grade[2][0] == jogador)) {
             return true;
         }
         return false;
