@@ -7,7 +7,7 @@ public class JogoDaVelha {
     Scanner scan = new Scanner(System.in);
 
     private char[][] grade;
-    
+
     private char jogador;
     private int numJogadas;
     private int linha;
@@ -97,8 +97,8 @@ public class JogoDaVelha {
 
     public void validarJogada() {
 
-        boolean valida = false;
-        while (!valida) {
+        boolean validar = false;
+        while (!validar) {
 
             this.linha = this.lerJogada("Linha");
             this.coluna = this.lerJogada("Coluna");
@@ -115,7 +115,7 @@ public class JogoDaVelha {
                     System.out.println("Posição já preenchida! Tente novamente...");
                 } else {
 
-                    valida = true;
+                    validar = true;
                     this.numJogadas++;
                     this.grade[linha][coluna] = this.jogador;
                 }
