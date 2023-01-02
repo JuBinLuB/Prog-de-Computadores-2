@@ -104,7 +104,7 @@ public class JogoDaVelha {
             this.coluna = this.lerJogada("Coluna");
 
             System.out.println();
-            if (linha >= 1 && linha <= 3 && coluna >= 1 && coluna <= 3) {
+            if (this.linha >= 1 && this.linha <= 3 && this.coluna >= 1 && this.coluna <= 3) {
 
                 this.linha--;
                 this.coluna--;
