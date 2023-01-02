@@ -7,7 +7,7 @@ public class JogoDaVelha {
     Scanner scan = new Scanner(System.in);
 
     private char[][] grade;
-
+    
     private char jogador;
     private int numJogadas;
     private int linha;
@@ -55,7 +55,7 @@ public class JogoDaVelha {
 
     public void jogar() {
 
-        System.out.println("Faça sua jogada atribuindo valores de 1 a 3 para as linhas e para as colunas...\n");
+        System.out.println("Entre com valores de 1 a 3, seja para as linhas ou para as colunas.\n");
 
         boolean terminar = false;
         while (!terminar) {
