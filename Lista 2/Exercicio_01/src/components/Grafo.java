@@ -33,8 +33,10 @@ public class Grafo {
     public void verificarVizinhos(int verticeX, int verticeY) {
 
         if (this.grafo[verticeX - 1][verticeY - 1]) {
+
             System.out.println("Os vértices " + verticeX + " e " + verticeY + " são vizinhos.");
         } else {
+
             System.out.println("Os vértices " + verticeX + " e " + verticeY + " não são vizinhos.");
         }
 
@@ -54,18 +56,12 @@ public class Grafo {
         System.out.println();
     }
 
-    private static int[][] auxiliar;
-
     public void imprimirGrafo() {
 
         for (int i = 0; i < this.grafo.length; i++) {
-
-            auxiliar = new int[this.grafo.length][this.grafo[i].length];
-
             for (int j = 0; j < this.grafo[i].length; j++) {
 
-                auxiliar[i][j] = (this.grafo[i][j]) ? 1 : 0;
-                System.out.print(auxiliar[i][j] + " ");
+                System.out.print((this.grafo[i][j] ? 1 : 0) + " ");
             }
 
             System.out.println();
