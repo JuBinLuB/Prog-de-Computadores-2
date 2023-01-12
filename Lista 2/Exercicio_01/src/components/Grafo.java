@@ -35,7 +35,7 @@ public class Grafo {
         if (this.grafo[verticeI - 1][verticeJ - 1]) {
             System.out.println("Os vértices " + verticeI + " e " + verticeJ + " são vizinhos.");
         } else {
-            System.out.println("Os vértices " + verticeJ + " e " + verticeJ + " não são vizinhos.");
+            System.out.println("Os vértices " + verticeI + " e " + verticeJ + " não são vizinhos.");
         }
     }
 

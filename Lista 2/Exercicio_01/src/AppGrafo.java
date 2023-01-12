@@ -26,6 +26,8 @@ public class AppGrafo {
             System.out.print("Listar todos os vizinhos do vértice: ");
             verticeK = scan.nextInt();
 
+            System.out.println();
+
         } while (verticeI < 1 || verticeI > 5 ||
                 verticeJ < 1 || verticeJ > 5 ||
                 verticeJ < 1 || verticeJ > 5);
