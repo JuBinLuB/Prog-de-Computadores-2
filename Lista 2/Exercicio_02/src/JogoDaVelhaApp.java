@@ -1,6 +1,6 @@
 import components.JogoDaVelha;
 
-public class App {
+public class JogoDaVelhaApp {
     public static void main(String[] args) {
 
         JogoDaVelha jogo = new JogoDaVelha();
