@@ -30,25 +30,22 @@ public class Grafo {
         }
     }
 
-    public void verificarVizinhos(int verticeX, int verticeY) {
+    public void verificarSeVizinhos(int verticeI, int verticeJ) {
 
-        if (this.grafo[verticeX - 1][verticeY - 1]) {
-
-            System.out.println("Os vértices " + verticeX + " e " + verticeY + " são vizinhos.");
+        if (this.grafo[verticeI - 1][verticeJ - 1]) {
+            System.out.println("Os vértices " + verticeI + " e " + verticeJ + " são vizinhos.");
         } else {
-
-            System.out.println("Os vértices " + verticeX + " e " + verticeY + " não são vizinhos.");
+            System.out.println("Os vértices " + verticeJ + " e " + verticeJ + " não são vizinhos.");
         }
-
-        System.out.println();
     }
 
-    public void listarVizinhos(int verticeX) {
+    public void listarVerticesVizinhos(int vertice) {
+
+        System.out.print("Os vértices vizinhos de " + vertice + " são: ");
 
         for (int i = 0; i < this.grafo.length; i++) {
 
-            if (this.grafo[verticeX - 1][i]) {
-
+            if (this.grafo[vertice - 1][i]) {
                 System.out.print((i + 1) + " ");
             }
         }
@@ -58,9 +55,10 @@ public class Grafo {
 
     public void imprimirGrafo() {
 
+        System.out.println("Matriz de adjascência do Grafo:");
+
         for (int i = 0; i < this.grafo.length; i++) {
             for (int j = 0; j < this.grafo[i].length; j++) {
-
                 System.out.print((this.grafo[i][j] ? 1 : 0) + " ");
             }
 
