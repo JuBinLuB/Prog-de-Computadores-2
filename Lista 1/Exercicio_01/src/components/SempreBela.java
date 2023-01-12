@@ -65,9 +65,9 @@ public class SempreBela {
 
         for (int i = 0; i < manicures.length; i++) {
 
-            fatura += precoPes * manicures[i].getPes();
-            fatura += precoMaos * manicures[i].getMaos();
-            fatura += precoPodologia * manicures[i].getPodologia();
+            fatura += precoPes * this.manicures[i].getPes();
+            fatura += precoMaos * this.manicures[i].getMaos();
+            fatura += precoPodologia * this.manicures[i].getPodologia();
             System.out.println((i + 1) + "º Manicure receberá: " + fatura * 0.5);
             fatura = 0;
         }

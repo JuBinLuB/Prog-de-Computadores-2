@@ -9,16 +9,20 @@ public class Primos {
     private int[] auxiliar;
     private int[] fatoresPrimos;
 
+    public Primos() {
+        this.contador = 0;
+    }
+
     public int getNumero() {
         return this.numero;
     }
 
-    public int getContador() {
-        return this.contador;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
-    public Primos() {
-        this.contador = 0;
+    public int getContador() {
+        return this.contador;
     }
 
     public void leitura() {
@@ -26,7 +30,7 @@ public class Primos {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Insira um número: ");
-        this.numero = scan.nextInt();
+        setNumero(scan.nextInt());
 
         this.auxiliar = new int[getNumero()];
 

@@ -66,9 +66,9 @@ public class Plantas {
         System.out.println("Quantidade de plantas a serem compradas...");
         for (int i = 0; i < plantas.length; i++) {
 
-            rep = plantas[i].getEstoqueIdeal() - plantas[i].getEstoque();
+            rep = this.plantas[i].getEstoqueIdeal() - this.plantas[i].getEstoque();
             if (rep > 0) {
-                System.out.println(plantas[i].getNome() + ": " + rep);
+                System.out.println(this.plantas[i].getNome() + ": " + rep);
             }
 
         }
