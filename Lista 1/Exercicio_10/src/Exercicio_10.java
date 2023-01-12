@@ -10,5 +10,4 @@ public class Exercicio_10 {
         primos.armazenarFatoresPrimos();
         primos.imprimirFatoresPrimos();
     }
-
 }

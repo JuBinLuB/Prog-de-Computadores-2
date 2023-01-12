@@ -9,20 +9,16 @@ public class Primos {
     private int[] auxiliar;
     private int[] fatoresPrimos;
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
     public int getNumero() {
         return this.numero;
     }
 
-    public void setContador(int contador) {
-        this.contador = contador;
-    }
-
     public int getContador() {
         return this.contador;
+    }
+
+    public Primos() {
+        this.contador = 0;
     }
 
     public void leitura() {
@@ -43,7 +39,7 @@ public class Primos {
 
             if (numero % i == 0) {
 
-                this.auxiliar[contador] = i;
+                this.auxiliar[getContador()] = i;
                 this.contador++;
                 return contarFatoresPrimos(numero / i);
             }
@@ -57,10 +53,8 @@ public class Primos {
         this.fatoresPrimos = new int[getContador()];
 
         for (int i = 0; i < fatoresPrimos.length; i++) {
-
             this.fatoresPrimos[i] = this.auxiliar[i];
         }
-
     }
 
     public void imprimirFatoresPrimos() {
@@ -71,11 +65,10 @@ public class Primos {
         for (int i = 0; i < fatoresPrimos.length; i++) {
 
             System.out.printf("%3d | %3d\n", decompor, this.fatoresPrimos[i]);
-            decompor /= fatoresPrimos[i];
+            decompor /= this.fatoresPrimos[i];
         }
 
         System.out.printf("%3d |\n", decompor);
         System.out.println();
     }
-
 }
