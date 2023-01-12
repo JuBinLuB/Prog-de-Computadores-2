@@ -2,13 +2,13 @@ package components;
 
 import java.util.Random;
 
-public class Grafo {
+public class Grafos {
 
     Random rand = new Random();
 
     private boolean[][] grafo;
 
-    public Grafo() {
+    public Grafos() {
 
         this.grafo = new boolean[5][5];
 
@@ -53,7 +53,7 @@ public class Grafo {
         System.out.println();
     }
 
-    public void imprimirGrafo() {
+    public void exibirGrafo() {
 
         System.out.println("Matriz de adjascência do Grafo:");
 

@@ -1,4 +1,4 @@
-import components.Grafo;
+import components.Grafos;
 import java.util.Scanner;
 
 public class AppGrafo {
@@ -6,14 +6,17 @@ public class AppGrafo {
 
         Scanner scan = new Scanner(System.in);
 
-        Grafo grafo = new Grafo();
+        Grafos grafo = new Grafos();
 
-        int verticeI, verticeJ, verticeK;
+        int verticeI;
+        int verticeJ;
+        int verticeK;
 
-        System.out.println("Insira valores inteiros de 1 a 5...");
-        System.out.println();
+        System.out.println("Insira valores inteiros de 1 a 5, para...");
 
         do {
+
+            System.out.println();
 
             System.out.println("Determinar se dois vértices são vizinhos...");
             System.out.print("1º Vértice: ");
@@ -30,9 +33,9 @@ public class AppGrafo {
 
         } while (verticeI < 1 || verticeI > 5 ||
                 verticeJ < 1 || verticeJ > 5 ||
-                verticeJ < 1 || verticeJ > 5);
+                verticeK < 1 || verticeK > 5);
 
-        grafo.imprimirGrafo();
+        grafo.exibirGrafo();
         grafo.verificarSeVizinhos(verticeI, verticeJ);
         grafo.listarVerticesVizinhos(verticeK);
 
