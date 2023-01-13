@@ -1,12 +1,17 @@
 package components;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Grafos {
 
     Random rand = new Random();
 
     private boolean[][] grafo;
+
+    private static int verticeX;
+    private static int verticeY;
+    private static int verticeZ;
 
     public Grafos() {
 
@@ -28,6 +33,30 @@ public class Grafos {
                 }
             }
         }
+    }
+
+    public static int getVerticeX() {
+        return verticeX;
+    }
+
+    public static void setVerticeX(int verticeX) {
+        Grafos.verticeX = verticeX;
+    }
+
+    public static int getVerticeY() {
+        return verticeY;
+    }
+
+    public static void setVerticeY(int verticeY) {
+        Grafos.verticeY = verticeY;
+    }
+
+    public static int getVerticeZ() {
+        return verticeZ;
+    }
+
+    public static void setVerticeZ(int verticeZ) {
+        Grafos.verticeZ = verticeZ;
     }
 
     public void verificarSeVizinhos(int verticeI, int verticeJ) {
@@ -59,6 +88,7 @@ public class Grafos {
 
         for (int i = 0; i < this.grafo.length; i++) {
             for (int j = 0; j < this.grafo[i].length; j++) {
+
                 System.out.print((this.grafo[i][j] ? 1 : 0) + " ");
             }
 
@@ -66,5 +96,33 @@ public class Grafos {
         }
 
         System.out.println();
+    }
+
+    public static void leitura() {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Insira valores inteiros de 1 a 5...");
+        do {
+
+            System.out.print("1º Vértice: ");
+            setVerticeX(scan.nextInt());
+
+            do {
+
+                System.out.print("2º Vértice: ");
+                setVerticeY(scan.nextInt());
+
+            } while (getVerticeY() == getVerticeX());
+
+            System.out.print("3º Vértice: ");
+            setVerticeZ(scan.nextInt());
+
+        } while (getVerticeX() < 1 || getVerticeX() > 5 ||
+                getVerticeY() < 1 || getVerticeY() > 5 ||
+                getVerticeZ() < 1 || getVerticeZ() > 5);
+
+        System.out.println();
+        scan.close();
     }
 }

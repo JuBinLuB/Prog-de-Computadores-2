@@ -5,8 +5,10 @@ public class GrafoApp {
 
         Grafos grafo = new Grafos();
 
+        Grafos.leitura();
+
         grafo.exibirGrafo();
-        grafo.verificarSeVizinhos(1, 4);
-        grafo.listarVerticesVizinhos(5);
+        grafo.verificarSeVizinhos(Grafos.getVerticeX(), Grafos.getVerticeY());
+        grafo.listarVerticesVizinhos(Grafos.getVerticeZ());
     }
 }

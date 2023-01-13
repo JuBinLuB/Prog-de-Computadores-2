@@ -28,6 +28,34 @@ public class JogoDaVelha {
         this.coluna = 0;
     }
 
+    public char getJogador() {
+        return jogador;
+    }
+
+    public void setJogador(char jogador) {
+        this.jogador = jogador;
+    }
+
+    public int getNumJogadas() {
+        return numJogadas;
+    }
+
+    public int getLinha() {
+        return linha;
+    }
+
+    public void setLinha(int linha) {
+        this.linha = linha;
+    }
+
+    public int getColuna() {
+        return coluna;
+    }
+
+    public void setColuna(int coluna) {
+        this.coluna = coluna;
+    }
+
     public void exibirGrade() {
 
         for (int i = 0; i < this.grade.length; i++) {
@@ -60,14 +88,14 @@ public class JogoDaVelha {
         boolean terminar = false;
         while (!terminar) {
 
-            if (this.numJogadas % 2 == 1) {
+            if (getNumJogadas() % 2 == 1) {
 
                 System.out.println("Vez do jogador 1...");
-                this.jogador = StatusPlace.PLAYER_ONE.getSimbolo();
+                setJogador(StatusPlace.PLAYER_ONE.getSimbolo());
             } else {
 
                 System.out.println("Vez do jogador 2...");
-                this.jogador = StatusPlace.PLAYER_TWO.getSimbolo();
+                setJogador(StatusPlace.PLAYER_TWO.getSimbolo());
             }
 
             this.validarJogada();
@@ -100,24 +128,24 @@ public class JogoDaVelha {
         boolean validar = false;
         while (!validar) {
 
-            this.linha = this.lerJogada("Linha");
-            this.coluna = this.lerJogada("Coluna");
+            setLinha(this.lerJogada("Linha"));
+            setColuna(this.lerJogada("Coluna"));
 
             System.out.println();
-            if (this.linha >= 1 && this.linha <= 3 && this.coluna >= 1 && this.coluna <= 3) {
+            if (getLinha() >= 1 && getLinha() <= 3 && getColuna() >= 1 && getColuna() <= 3) {
 
                 this.linha--;
                 this.coluna--;
 
-                if (this.grade[linha][coluna] == StatusPlace.PLAYER_ONE.getSimbolo() ||
-                        this.grade[linha][coluna] == StatusPlace.PLAYER_TWO.getSimbolo()) {
+                if (this.grade[getLinha()][getColuna()] == StatusPlace.PLAYER_ONE.getSimbolo() ||
+                        this.grade[getLinha()][getColuna()] == StatusPlace.PLAYER_TWO.getSimbolo()) {
 
                     System.out.println("Posição já preenchida! Tente novamente...");
                 } else {
 
                     validar = true;
                     this.numJogadas++;
-                    this.grade[linha][coluna] = this.jogador;
+                    this.grade[getLinha()][getColuna()] = this.jogador;
                 }
             } else {
                 System.out.println("Jogada inválida! Tente novamente...");
@@ -142,7 +170,7 @@ public class JogoDaVelha {
 
     public boolean verificarEmpate() {
 
-        if (this.numJogadas > 9) {
+        if (getNumJogadas() > 9) {
             return true;
         }
         return false;
