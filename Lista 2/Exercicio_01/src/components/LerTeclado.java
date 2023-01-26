@@ -4,32 +4,32 @@ import java.util.Scanner;
 
 public class LerTeclado {
 
-    private static int verticeX;
-    private static int verticeY;
-    private static int verticeZ;
+    private static int VerticeX;
+    private static int VerticeY;
+    private static int VerticeZ;
 
     public static int getVerticeX() {
-        return verticeX;
+        return VerticeX;
     }
 
     public static void setVerticeX(int verticeX) {
-        LerTeclado.verticeX = verticeX;
+        LerTeclado.VerticeX = verticeX;
     }
 
     public static int getVerticeY() {
-        return verticeY;
+        return VerticeY;
     }
 
     public static void setVerticeY(int verticeY) {
-        LerTeclado.verticeY = verticeY;
+        LerTeclado.VerticeY = verticeY;
     }
 
     public static int getVerticeZ() {
-        return verticeZ;
+        return VerticeZ;
     }
 
     public static void setVerticeZ(int verticeZ) {
-        LerTeclado.verticeZ = verticeZ;
+        LerTeclado.VerticeZ = verticeZ;
     }
 
     public static void leitura() {
