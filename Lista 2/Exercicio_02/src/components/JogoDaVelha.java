@@ -1,10 +1,6 @@
 package components;
 
-import java.util.Scanner;
-
 public class JogoDaVelha {
-
-    Scanner scan = new Scanner(System.in);
 
     private char[][] grade;
 
@@ -117,19 +113,13 @@ public class JogoDaVelha {
         }
     }
 
-    public int lerJogada(String coordenada) {
-
-        System.out.print(coordenada + ": ");
-        return scan.nextInt();
-    }
-
     public void validarJogada() {
 
         boolean validar = false;
         while (!validar) {
 
-            setLinha(this.lerJogada("Linha"));
-            setColuna(this.lerJogada("Coluna"));
+            setLinha(LerDados.lerJogada("Linha"));
+            setColuna(LerDados.lerJogada("Coluna"));
 
             System.out.println();
             if (getLinha() >= 1 && getLinha() <= 3 && getColuna() >= 1 && getColuna() <= 3) {
