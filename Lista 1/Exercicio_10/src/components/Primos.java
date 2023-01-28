@@ -1,7 +1,5 @@
 package components;
 
-import java.util.Scanner;
-
 public class Primos {
 
     private int numero;
@@ -11,6 +9,8 @@ public class Primos {
 
     public Primos() {
         this.contador = 0;
+        this.numero = Leitura.lerTeclado();
+        this.auxiliar = new int[getNumero()];
     }
 
     public int getNumero() {
@@ -25,18 +25,7 @@ public class Primos {
         return this.contador;
     }
 
-    public void leitura() {
-
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("Insira um número: ");
-        setNumero(scan.nextInt());
-
-        this.auxiliar = new int[getNumero()];
-
-        scan.close();
-    }
-
+    // Conta e decompõe o número dado em fatores primos.
     public int contarFatoresPrimos(int numero) {
 
         for (int i = 2; i <= numero; i++) {
@@ -52,6 +41,7 @@ public class Primos {
         return 0;
     }
 
+    // Armazena os fatores primos do número dado em um Vetor de tamanho exato.
     public void armazenarFatoresPrimos() {
 
         this.fatoresPrimos = new int[getContador()];
@@ -61,6 +51,7 @@ public class Primos {
         }
     }
 
+    // Realiza a impressão dos fatores primos no console.
     public void imprimirFatoresPrimos() {
 
         int decompor = getNumero();

@@ -5,7 +5,6 @@ public class Exercicio_10 {
 
         Primos primos = new Primos();
 
-        primos.leitura();
         primos.contarFatoresPrimos(primos.getNumero());
         primos.armazenarFatoresPrimos();
         primos.imprimirFatoresPrimos();
