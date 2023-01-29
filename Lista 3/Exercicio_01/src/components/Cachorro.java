@@ -4,10 +4,8 @@ public class Cachorro extends Animal {
 
     private String raca;
 
-    public Cachorro(String nome, double peso, String raca) {
+    public Cachorro(String nome) {
         super(nome);
-        super.setPeso(peso);
-        this.raca = raca;
     }
 
     public String getRaca() {

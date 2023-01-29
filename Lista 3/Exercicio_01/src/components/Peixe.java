@@ -4,10 +4,8 @@ public class Peixe extends Animal {
 
     private String tipoHabitat;
 
-    public Peixe(String nome, double peso, String tipoHabitat) {
+    public Peixe(String nome) {
         super(nome);
-        super.setPeso(peso);
-        this.tipoHabitat = tipoHabitat;
     }
 
     public String getTipoHabitat() {
