@@ -4,14 +4,10 @@ import java.util.Scanner;
 
 public class Leitura {
 
+    static Scanner scan = new Scanner(System.in);
+
     public static int lerTeclado() {
-
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("Insira um número: ");
-        int numero = scan.nextInt();
-
-        scan.close();
-        return numero;
+        System.out.print("Digite um número: ");
+        return scan.nextInt();
     }
 }

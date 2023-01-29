@@ -1,12 +1,15 @@
+import components.Leitura;
 import components.Primos;
 
 public class Exercicio_10 {
     public static void main(String[] args) {
 
-        Primos primos = new Primos();
+        int numero = Leitura.lerTeclado();
 
-        primos.contarFatoresPrimos(primos.getNumero());
+        Primos primos = new Primos(numero);
+
+        primos.contarFatoresPrimos(numero);
         primos.armazenarFatoresPrimos();
-        primos.imprimirFatoresPrimos();
+        primos.imprimirFatoresPrimos(numero);
     }
 }

@@ -2,23 +2,13 @@ package components;
 
 public class Primos {
 
-    private int numero;
     private int contador;
     private int[] auxiliar;
     private int[] fatoresPrimos;
 
-    public Primos() {
+    public Primos(int numero) {
         this.contador = 0;
-        this.numero = Leitura.lerTeclado();
-        this.auxiliar = new int[getNumero()];
-    }
-
-    public int getNumero() {
-        return this.numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
+        this.auxiliar = new int[numero];
     }
 
     public int getContador() {
@@ -52,14 +42,17 @@ public class Primos {
     }
 
     // Realiza a impressão dos fatores primos no console.
-    public void imprimirFatoresPrimos() {
+    public void imprimirFatoresPrimos(int numero) {
 
-        int decompor = getNumero();
+        int decompor = numero;
 
-        System.out.println("\nFatores primos do número " + getNumero() + ":\n");
+        System.out.println("\nFatores primos do número " + numero + " são:");
+        System.out.println();
+
         for (int i = 0; i < fatoresPrimos.length; i++) {
 
-            System.out.printf("%3d | %3d\n", decompor, this.fatoresPrimos[i]);
+            System.out.printf("%3d | %3d", decompor, this.fatoresPrimos[i]);
+            System.out.println();
             decompor /= this.fatoresPrimos[i];
         }
 
