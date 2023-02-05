@@ -29,10 +29,10 @@ public class PessoaApp {
         vendedor.setQntVendas(230);
 
         // Imprimindo todas as informações.
-        System.out.println(cliente.toString());
+        System.out.println(cliente);
         System.out.println();
-        System.out.println(gerente.toString());
+        System.out.println(gerente);
         System.out.println();
-        System.err.println(vendedor.toString());
+        System.err.println(vendedor);
     }
 }

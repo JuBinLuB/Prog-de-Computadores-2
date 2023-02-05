@@ -9,7 +9,6 @@ public class AnimalApp {
 
         // Inserindo as informações do Peixe.
         System.out.print("Informe o nome do Peixe: ");
-
         Peixe peixe = new Peixe(scan.nextLine());
 
         System.out.print("Informe o peso do Peixe: ");
@@ -17,12 +16,10 @@ public class AnimalApp {
         scan.nextLine();
         System.out.print("Informe o Habitat do Peixe: ");
         peixe.setTipoHabitat(scan.nextLine());
-
         System.out.println();
 
         // Inserindo as informações do Cachorro.
         System.out.print("Informe o nome do Cachorro: ");
-
         Cachorro cachorro = new Cachorro(scan.nextLine());
 
         System.out.print("Informe o peso do Cachorro: ");
@@ -30,13 +27,12 @@ public class AnimalApp {
         scan.nextLine();
         System.out.print("Informe a raça do Cachorro: ");
         cachorro.setRaca(scan.nextLine());
-
         System.out.println();
 
         // Imprimindo as informações.
-        System.out.println(peixe.toString());
+        System.out.println(peixe);
         System.out.println();
-        System.out.println(cachorro.toString());
+        System.out.println(cachorro);
 
         scan.close();
     }
