@@ -8,6 +8,6 @@ public class Aniversario extends CartaoWeb {
 
     @Override
     public void showMessage() {
-        System.out.println("Feliz Aniversário " + super.getDestinatario() + "!!");
+        System.out.println("Feliz Aniversário " + super.getDestinatario() + "!");
     }
 }

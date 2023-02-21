@@ -8,9 +8,9 @@ public class CartaoWebApp {
 
         CartaoWeb[] cartao = new CartaoWeb[3];
 
-        cartao[0] = new DiaDosNamorados("Nino");
-        cartao[1] = new Natal("Emilia");
-        cartao[2] = new Aniversario("Mari");
+        cartao[0] = new DiaDosNamorados("Kaguya");
+        cartao[1] = new Natal("Nino");
+        cartao[2] = new Aniversario("Azusa");
 
         for (CartaoWeb cartaoWeb : cartao) {
             cartaoWeb.showMessage();

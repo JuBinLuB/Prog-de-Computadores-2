@@ -8,6 +8,6 @@ public class Natal extends CartaoWeb {
 
     @Override
     public void showMessage() {
-        System.out.println("Feliz Natal " + super.getDestinatario() + "!!");
+        System.out.println("Feliz Natal " + super.getDestinatario() + "!");
     }
 }

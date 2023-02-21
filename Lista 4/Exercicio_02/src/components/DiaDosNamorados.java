@@ -8,6 +8,6 @@ public class DiaDosNamorados extends CartaoWeb {
 
     @Override
     public void showMessage() {
-        System.out.println("Feliz Dia dos Namorados " + super.getDestinatario() + "!!");
+        System.out.println("Feliz Dia dos Namorados " + super.getDestinatario() + "!");
     }
 }
