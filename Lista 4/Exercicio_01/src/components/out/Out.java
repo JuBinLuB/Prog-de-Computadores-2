@@ -1,4 +1,6 @@
-package components;
+package components.out;
+
+import components.Form;
 
 public interface Out {
 

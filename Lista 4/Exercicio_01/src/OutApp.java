@@ -1,8 +1,8 @@
 import java.io.IOException;
 import components.Container;
-import components.Out;
-import components.outcomponents.ConsoleOut;
-import components.outcomponents.FileOut;
+import components.out.Out;
+import components.out.ConsoleOut;
+import components.out.FileOut;
 
 public class OutApp {
     public static void main(String[] args) {

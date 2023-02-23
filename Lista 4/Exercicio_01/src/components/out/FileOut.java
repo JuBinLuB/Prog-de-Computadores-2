@@ -1,9 +1,8 @@
-package components.outcomponents;
+package components.out;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import components.Form;
-import components.Out;
 
 public class FileOut implements Out {
 

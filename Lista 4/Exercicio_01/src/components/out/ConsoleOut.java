@@ -1,7 +1,6 @@
-package components.outcomponents;
+package components.out;
 
 import components.Form;
-import components.Out;
 
 public class ConsoleOut implements Out {
 
