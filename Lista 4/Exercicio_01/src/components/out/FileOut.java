@@ -14,7 +14,6 @@ public class FileOut implements Out {
 
     @Override
     public void flush(Form f) {
-
         try {
             writer.write(f + "\n");
         } catch (IOException e) {

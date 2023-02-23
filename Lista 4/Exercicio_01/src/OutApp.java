@@ -14,7 +14,7 @@ public class OutApp {
         Out consoleOut = new ConsoleOut();
         container.print(consoleOut);
 
-        // Saída num arquivo de texto.
+        // Saída em arquivo de texto.
         Out fileOut;
         try {
             fileOut = new FileOut("Form content.txt");
