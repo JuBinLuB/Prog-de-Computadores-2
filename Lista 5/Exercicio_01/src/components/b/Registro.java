@@ -26,7 +26,6 @@ public class Registro {
             System.out.println("--------- " + i + "º Produto --------- ");
 
             Registro.validar = false;
-
             do {
 
                 scan = new Scanner(System.in);
