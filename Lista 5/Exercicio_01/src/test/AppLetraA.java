@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import components.a.Menu;
+import components.a.MenuA;
 
 public class AppLetraA {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class AppLetraA {
         Scanner scan = new Scanner(System.in);
         Set<String> nomes = new HashSet<>();
 
-        Menu.painel(nomes, scan);
+        MenuA.painel(nomes, scan);
 
         System.out.println(nomes);
         scan.close();

@@ -3,7 +3,7 @@ package components.a;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Menu {
+public class MenuA {
 
     private static boolean aberto;
     private static int digito;
@@ -11,7 +11,7 @@ public class Menu {
 
     public static void painel(Set<String> nomes, Scanner scan) {
 
-        Menu.aberto = true;
+        MenuA.aberto = true;
 
         do {
 
@@ -26,13 +26,13 @@ public class Menu {
             do {
 
                 System.out.print("Escolha uma opção para navegar pelo Menu: ");
-                Menu.digito = scan.nextInt();
+                MenuA.digito = scan.nextInt();
 
                 scan.nextLine();
                 System.out.println();
-            } while (Menu.digito < 1 && Menu.digito > 4);
+            } while (MenuA.digito < 1 && MenuA.digito > 4);
 
-            switch (Menu.digito) {
+            switch (MenuA.digito) {
 
                 case 1:
 
@@ -44,10 +44,10 @@ public class Menu {
 
                     System.out.println("--------- Remover Nome ---------");
                     System.out.print("Digite o nome que deseja remover: ");
-                    Menu.nomeInformado = scan.nextLine();
+                    MenuA.nomeInformado = scan.nextLine();
 
-                    if (nomes.remove(Menu.nomeInformado)) {
-                        System.out.println(Menu.nomeInformado + " removido(a) com sucesso!");
+                    if (nomes.remove(MenuA.nomeInformado)) {
+                        System.out.println(MenuA.nomeInformado + " removido(a) com sucesso!");
                     } else {
                         System.out.println("Erro. Nome informado não pertence ao conjunto.");
                     }
@@ -56,12 +56,12 @@ public class Menu {
 
                     System.out.println("--------- Verificar Nome ---------");
                     System.out.print("Digite o nome que deseja verificar: ");
-                    Menu.nomeInformado = scan.nextLine();
+                    MenuA.nomeInformado = scan.nextLine();
 
-                    if ((nomes.contains(Menu.nomeInformado))) {
-                        System.out.println(Menu.nomeInformado + " está contido(a) no conjunto.");
+                    if ((nomes.contains(MenuA.nomeInformado))) {
+                        System.out.println(MenuA.nomeInformado + " está contido(a) no conjunto.");
                     } else {
-                        System.out.println(Menu.nomeInformado + " não está contido(a) no conjunto.");
+                        System.out.println(MenuA.nomeInformado + " não está contido(a) no conjunto.");
                     }
                     break;
                 case 4:
@@ -72,7 +72,7 @@ public class Menu {
                 case 5:
 
                     System.out.println("--------- Menu encerrado ---------");
-                    Menu.aberto = false;
+                    MenuA.aberto = false;
                     break;
                 default:
                     System.out.println("Digito inválido.");
@@ -80,6 +80,6 @@ public class Menu {
             }
 
             System.out.println();
-        } while (Menu.aberto);
+        } while (MenuA.aberto);
     }
 }
