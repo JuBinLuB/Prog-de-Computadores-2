@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import components.b.DataComparator;
+import components.b.DateComparator;
 import components.b.Empregados;
 import components.b.Funcionalidade;
-import components.b.NomeComparator;
+import components.b.NameComparator;
 
 public class AppLetraB {
     public static void main(String[] args) {
@@ -21,37 +21,28 @@ public class AppLetraB {
 
         // Imprimindo a lista na ordem de inserção.
         System.out.println("Lista de Empregados:");
-        for (Empregados e : lista) {
-            System.out.println(e);
-        }
-
-        System.out.println("\n-------------------------------------\n");
+        Funcionalidade.exibirLista(lista);
 
         // i) Ordenar os funcionários pelo salário.
         System.out.println("Lista ordenada pelo salário:");
-        Funcionalidade.ordenar(lista);
-
-        System.out.println("\n-------------------------------------\n");
+        Collections.sort(lista);
+        Funcionalidade.exibirLista(lista);
 
         // ii) Ordenar os funcionários em ordem alfabética.
         System.out.println("Lista em ordem alfabética:");
-        Funcionalidade.ordenar(lista, new NomeComparator());
-
-        System.out.println("\n-------------------------------------\n");
+        Collections.sort(lista, new NameComparator());
+        Funcionalidade.exibirLista(lista);
 
         // iii) Exibir o funcionário de maior salário e o de menor.
-        System.out.println("Funcionário com o maior salário: ");
-        System.out.println(Collections.max(lista));
+        System.out.println("Funcionário com o maior salário: " + Collections.max(lista));
         System.out.println();
-        System.out.println("Funcionário com o menor salário: ");
-        System.out.println(Collections.min(lista));
-
-        System.out.println("\n-------------------------------------\n");
+        System.out.println("Funcionário com o menor salário: " + Collections.min(lista));
+        System.out.println();
+        System.out.println("------------------");
 
         // iv) Exibir o funcionário mais experiente e o menos experiente.
-        System.out.print("Funcionário mais experiente: ");
-        System.out.println(Collections.min(lista, new DataComparator()).getNome());
-        System.out.print("Funcionário menos experiente: ");
-        System.out.println(Collections.max(lista, new DataComparator()).getNome());
+        System.out.println("Funcionário mais experiente: " + Collections.min(lista, new DateComparator()).getNome());
+        System.out.println("Funcionário menos experiente: " + Collections.max(lista, new DateComparator()).getNome());
+        System.out.println();
     }
 }
