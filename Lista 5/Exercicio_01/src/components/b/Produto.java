@@ -28,6 +28,7 @@ public class Produto {
 
     @Override
     public boolean equals(Object obj) {
+
         if (obj == null) {
             return false;
         }
