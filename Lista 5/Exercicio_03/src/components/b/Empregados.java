@@ -81,7 +81,6 @@ public class Empregados implements Comparable<Empregados> {
 
     @Override
     public int compareTo(Empregados o) {
-
         // Retorna -1, se this < o.
         // Retorna 0, se this == o.
         // Retorna 1, se this > o.
