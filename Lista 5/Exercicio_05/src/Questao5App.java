@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Questao5 {
+public class Questao5App {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
