@@ -52,7 +52,6 @@ public class ContaB {
     public void sacar(double valor) throws Exception {
 
         if ((this.getSaldo() + this.getLimite()) < valor) {
-
             // 4.Passando o saldo atual como parâmetro para o construtor de ContaException.
             throw new ContaException(this.getSaldo());
         }
