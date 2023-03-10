@@ -1,6 +1,7 @@
 package components;
 
 import java.util.Scanner;
+
 import components.out.Out;
 
 public class Container {

@@ -2,6 +2,7 @@ package components.out;
 
 import java.io.FileWriter;
 import java.io.IOException;
+
 import components.Form;
 
 public class FileOut implements Out {
