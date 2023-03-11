@@ -15,8 +15,6 @@ public class ReadOperation {
 
         ReadOperation.open = true;
 
-        // do {
-
         System.out.println("-------- Operações --------");
         System.out.println("[1] - Divisão");
         System.out.println("[2] - Logaritmo");
@@ -30,17 +28,10 @@ public class ReadOperation {
             System.out.println();
 
             try {
-
                 switch (ReadOperation.option) {
 
                     case 1:
                         System.out.println("-------- Divisão --------");
-                        // ReadOperation.validate = false;
-
-                        // do {
-
-                        // try {
-
                         System.out.print("Numerador: ");
                         int p = scan.nextInt();
                         System.out.print("Denominador: ");
@@ -50,25 +41,10 @@ public class ReadOperation {
                         System.out.println("Resultado: " + r);
 
                         ReadOperation.validate = true;
-
-                        // } catch (InvalidOperationException | InputMismatchException e) {
-                        // System.out.println("\nErro: " + e.getMessage());
-                        // e.printStackTrace();
-                        // scan.nextLine();
-                        // }
-
-                        // System.out.println();
-                        // } while (!ReadOperation.validate);
                         break;
 
                     case 2:
                         System.out.println("-------- Logaritmo --------");
-                        // ReadOperation.validate = false;
-
-                        // do {
-
-                        // try {
-
                         System.out.print("Logaritmando: ");
                         int log = scan.nextInt();
 
@@ -76,15 +52,6 @@ public class ReadOperation {
                         System.out.println("Resultado: " + s);
 
                         ReadOperation.validate = true;
-
-                        // } catch (InvalidOperationException | InputMismatchException e) {
-                        // System.out.println("\nErro: " + e.getMessage());
-                        // e.printStackTrace();
-                        // scan.nextLine();
-                        // }
-
-                        // System.out.println();
-                        // } while (!ReadOperation.validate);
                         break;
 
                     case 3:
@@ -106,7 +73,6 @@ public class ReadOperation {
         }
 
         System.out.println();
-        // } while (ReadOperation.open);
 
         if (ReadOperation.open) {
             ReadOperation.operationsPanel();
