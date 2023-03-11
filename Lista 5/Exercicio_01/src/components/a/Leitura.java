@@ -29,6 +29,5 @@ public class Leitura {
 
             i++;
         } while (Leitura.lendo);
-
     }
 }

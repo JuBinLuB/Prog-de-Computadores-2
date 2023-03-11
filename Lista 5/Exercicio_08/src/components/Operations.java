@@ -7,8 +7,8 @@ public class Operations {
 
     private static boolean validar;
 
-    public static int dividir(int numerador, int denominador) throws ArithmeticException {
-        return (numerador / denominador);
+    public static int dividir(int p, int q) throws ArithmeticException {
+        return p / q;
     }
 
     public static void leitura() throws InputMismatchException {

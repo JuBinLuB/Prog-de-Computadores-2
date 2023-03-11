@@ -10,10 +10,6 @@ public class ContaException extends Exception {
         return saldoRecuperado;
     }
 
-    public ContaException() {
-        super();
-    }
-
     // 3. Modificando o construtor de ContaException para receber o saldo atual.
     public ContaException(double saldo) {
         super("Saldo insuficiente.");
