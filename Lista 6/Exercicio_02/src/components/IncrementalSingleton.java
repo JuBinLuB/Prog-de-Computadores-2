@@ -11,6 +11,7 @@ public class IncrementalSingleton {
     }
 
     public static IncrementalSingleton getInstance() {
+
         if (instance == null) {
             instance = new IncrementalSingleton();
         }

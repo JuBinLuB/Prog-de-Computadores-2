@@ -1,12 +1,12 @@
 package test;
 
-import components.FormaFactory;
 import components.FormaGeometrica;
+import components.FormaGeometricaFactory;
 
 public class FormaGeometricaFactoryApp {
     public static void main(String[] args) {
 
-        FormaGeometrica forma = FormaFactory.getFormaGeometrica("circulo");
+        FormaGeometrica forma = FormaGeometricaFactory.getFormaGeometrica("circulo");
         forma.desenhar();
     }
 }

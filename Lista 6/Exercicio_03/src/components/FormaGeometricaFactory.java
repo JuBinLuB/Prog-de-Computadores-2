@@ -1,12 +1,13 @@
 package components;
 
-public class FormaFactory {
+public class FormaGeometricaFactory {
 
     public static FormaGeometrica getFormaGeometrica(String forma) {
 
         if (forma == null) {
             return null;
         }
+
         if (forma.equalsIgnoreCase("circulo")) {
             return new Circulo();
         } else if (forma.equalsIgnoreCase("quadrado")) {
