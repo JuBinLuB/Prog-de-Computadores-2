@@ -1,9 +1,9 @@
 package test;
 
-import components.CarroFactory;
-import components.CarroPopular;
-import components.CarroSedan;
-import components.ProdutorFactory;
+import components.factory.CarroFactory;
+import components.factory.ProdutorFactory;
+import components.typecar.CarroPopular;
+import components.typecar.CarroSedan;
 
 public class AbstractFactoryApp {
     public static void main(String[] args) {

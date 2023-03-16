@@ -1,4 +1,6 @@
-package components;
+package components.car;
+
+import components.typecar.CarroSedan;
 
 public class Siena implements CarroSedan {
 

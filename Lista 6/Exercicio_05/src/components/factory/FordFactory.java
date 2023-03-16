@@ -1,4 +1,9 @@
-package components;
+package components.factory;
+
+import components.car.Fiesta;
+import components.car.FiestaSedan;
+import components.typecar.CarroPopular;
+import components.typecar.CarroSedan;
 
 public class FordFactory extends CarroFactory {
 

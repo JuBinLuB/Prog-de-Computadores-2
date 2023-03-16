@@ -1,4 +1,6 @@
-package components;
+package components.car;
+
+import components.typecar.CarroPopular;
 
 public class Palio implements CarroPopular {
 

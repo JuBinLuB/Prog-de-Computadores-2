@@ -1,4 +1,4 @@
-package components;
+package components.typecar;
 
 public interface CarroSedan {
 
