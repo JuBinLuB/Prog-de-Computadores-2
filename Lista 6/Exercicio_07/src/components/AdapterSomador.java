@@ -7,8 +7,8 @@ public class AdapterSomador implements SomadorEsperado {
 
     private SomadorExistente somador;
 
-    public AdapterSomador() {
-        this.somador = new SomadorExistente();
+    public AdapterSomador(SomadorExistente somador) {
+        this.somador = somador;
     }
 
     @Override
@@ -21,5 +21,4 @@ public class AdapterSomador implements SomadorEsperado {
         }
         return somador.somaLista(lista);
     }
-
 }
