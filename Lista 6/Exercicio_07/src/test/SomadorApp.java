@@ -8,10 +8,10 @@ import components.SomadorExistente;
 public class SomadorApp {
     public static void main(String[] args) {
 
-        SomadorExistente somadorEsperado = new SomadorExistente();
-        SomadorEsperado somadorExistente = new AdapterSomador(somadorEsperado);
+        SomadorExistente somadorExistente = new SomadorExistente();
+        SomadorEsperado somadorEsperado = new AdapterSomador(somadorExistente);
 
-        Cliente cliente = new Cliente(somadorExistente);
+        Cliente cliente = new Cliente(somadorEsperado);
         cliente.executar();
     }
 }
