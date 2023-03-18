@@ -8,8 +8,7 @@ import components.SomadorExistente;
 public class SomadorApp {
     public static void main(String[] args) {
 
-        SomadorExistente somadorExistente = new SomadorExistente();
-        SomadorEsperado somadorEsperado = new AdapterSomador(somadorExistente);
+        SomadorEsperado somadorEsperado = new AdapterSomador(new SomadorExistente());
 
         Cliente cliente = new Cliente(somadorEsperado);
         cliente.executar();
