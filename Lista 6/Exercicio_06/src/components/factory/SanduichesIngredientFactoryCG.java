@@ -1,5 +1,9 @@
 package components.factory;
 
+import components.ingredients.PaoIntegral;
+import components.ingredients.PresuntoFrango;
+import components.ingredients.QueijoPrato;
+import components.ingredients.SaladaSemVerdura;
 import components.product.PaoIF;
 import components.product.PresuntoIF;
 import components.product.QueijoIF;
@@ -9,26 +13,22 @@ public class SanduichesIngredientFactoryCG implements SanduichesIngredientFactor
 
     @Override
     public PaoIF criarPao() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criarPao'");
+        return new PaoIntegral();
     }
 
     @Override
     public QueijoIF criarQueijo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criarQueijo'");
+        return new QueijoPrato();
     }
 
     @Override
     public PresuntoIF criarPresunto() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criarPresunto'");
+        return new PresuntoFrango();
     }
 
     @Override
     public SaladaIF criarSalada() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'criarSalada'");
+        return new SaladaSemVerdura();
     }
 
 }
