@@ -7,7 +7,6 @@ public class FormaGeometricaFactory {
         if (forma == null) {
             return null;
         }
-
         if (forma.equalsIgnoreCase("circulo")) {
             return new Circulo();
         } else if (forma.equalsIgnoreCase("quadrado")) {
