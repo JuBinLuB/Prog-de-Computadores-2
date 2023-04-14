@@ -14,6 +14,7 @@ public class TesteException {
     }
 
     static void metodo2() {
+
         System.out.println("Início do método2.");
 
         int[] array = new int[10];
@@ -26,6 +27,7 @@ public class TesteException {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Limite do array atingido.");
         }
+
         System.out.println("Fim do método2.");
     }
 }
