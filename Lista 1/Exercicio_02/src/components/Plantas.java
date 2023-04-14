@@ -70,6 +70,7 @@ public class Plantas {
             if (rep > 0) {
                 System.out.println(this.plantas[i].getNome() + ": " + rep);
             }
+            
         }
     }
 }
