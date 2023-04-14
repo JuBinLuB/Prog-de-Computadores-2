@@ -56,6 +56,7 @@ public class ReadOperation {
 
                     case 3:
                         System.out.print("-------- Calculadora encerrada --------");
+
                         ReadOperation.validate = true;
                         ReadOperation.open = false;
                         break;
